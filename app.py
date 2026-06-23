@@ -34,3 +34,11 @@ if arquivo is not None:
             "Média das Notas",
             round(media, 2)
         )
+    idade_minima = st.number_input(
+    "Idade mínima",
+    min_value=0,
+    value=18
+    )
+
+    filtrado = df[df["idade"] >= idade_minima]
+    st.dataframe(filtrado)
