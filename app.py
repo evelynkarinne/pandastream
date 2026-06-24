@@ -35,16 +35,12 @@ if arquivo is not None:
             "Média das Notas",
             round(media, 2)
         )
-    idade_minima = st.number_input(
-    "Idade mínima",
-    min_value=0,
-    value=18
-    )
+    idade_minima = st.number_input("Idade mínima", min_value=0, value=18)
 
     filtrado = df[df["idade"] >= idade_minima]
     st.dataframe(filtrado)
 
-    st.bar_chart(df["nota"])
-    st.line_chart(df["nota"])
+    st.write("Gráfico Aluno x Nota")
+    
     dados_grafico = df.set_index("nome")
     st.bar_chart(dados_grafico["nota"])
