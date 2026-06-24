@@ -3,10 +3,7 @@ import pandas as pd
 
 st.title("Sistema de Análise de Alunos")
 
-'''arquivo = st.file_uploader(
-    "Selecione um arquivo CSV",
-    type=["csv"]
-)'''
+#arquivo = st.file_uploader("Selecione um arquivo CSV", type=["csv"])
 
 arquivo = "alunos.csv"
 
