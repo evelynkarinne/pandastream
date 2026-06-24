@@ -8,9 +8,11 @@ st.title("Sistema de Análise de Alunos")
     type=["csv"]
 )'''
 
+arquivo = "alunos.csv"
+
 if arquivo is not None:
 
-    df = pd.read_csv("alunos.csv",index_col="id")
+    df = pd.read_csv(arquivo,index_col="id")
 
     print(df)
 
