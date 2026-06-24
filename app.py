@@ -3,14 +3,16 @@ import pandas as pd
 
 st.title("Sistema de Análise de Alunos")
 
-arquivo = st.file_uploader(
+'''arquivo = st.file_uploader(
     "Selecione um arquivo CSV",
     type=["csv"]
-)
+)'''
 
 if arquivo is not None:
 
-    df = pd.read_csv(arquivo)
+    df = pd.read_csv("alunos.csv",index_col="id")
+
+    print(df)
 
     st.subheader("Dados")
 
