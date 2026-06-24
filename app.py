@@ -43,3 +43,8 @@ if arquivo is not None:
 
     filtrado = df[df["idade"] >= idade_minima]
     st.dataframe(filtrado)
+
+    st.bar_chart(df["nota"])
+    st.line_chart(df["nota"])
+    dados_grafico = df.set_index("nome")
+    st.bar_chart(dados_grafico["nota"])
